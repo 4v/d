@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  areospike:
+    container_name: aerospike1
+    image: aerospike/aerospike-server.docker:latest
+    restart: always
+    networks:
+      - aerospikenetwork
+    deploy:
+        replicas: 2
+        endpoint_mode: dnsrr
+    labels:
+        com.aerospike.cluster: "aerospike"
+    command: [ "--config-file","/run/secrets/aerospike.conf"]
+    secrets:
+    - source: conffile
+      target: aerospike.conf
+      mode: 0440
+
