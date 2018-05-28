@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Echarts</title>
+    <script type="text/javascript" src="https://pyecharts.github.io/assets/js/echarts.min.js"></script>
+</head>
+<body>
+    <div id="4af754dde0c944589d914aec13b6e6dd" style="width:800px;height:400px;"></div>
+    <script type="text/javascript">
+
+var myChart_4af754dde0c944589d914aec13b6e6dd = echarts.init(document.getElementById('4af754dde0c944589d914aec13b6e6dd'), 'light', {renderer: 'canvas'});
+
+var option_4af754dde0c944589d914aec13b6e6dd = {
+    "title": [
+        {
+            "text": "\u8bbe\u5907\u6700\u65b0\u62d3\u6251\u56fe",
+            "left": "auto",
+            "top": "auto",
+            "textStyle": {
+                "fontSize": 18
+            },
+            "subtextStyle": {
+                "fontSize": 12
+            }
+        }
+    ],
+    "toolbox": {
+        "show": true,
+        "orient": "vertical",
+        "left": "95%",
+        "top": "center",
+        "feature": {
+            "saveAsImage": {
+                "show": true,
+                "title": "\u4e0b\u8f7d\u56fe\u7247"
+            },
+            "restore": {
+                "show": true
+            },
+            "dataView": {
+                "show": true
+            }
+        }
+    },
+    "series_id": 1802612,
+    "tooltip": {
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "backgroundColor": "rgba(50,50,50,0.7)",
+        "borderColor": "#333",
+        "borderWidth": 0
+    },
+    "series": [
+        {
+            "type": "graph",
+            "name": "Devices",
+            "layout": "force",
+            "symbol": "circle",
+            "circular": {
+                "rotateLabel": false
+            },
+            "force": {
+                "repulsion": 50,
+                "edgeLength": 50,
+                "gravity": 0.2
+            },
+            "label": {
+                "normal": {
+                    "show": false,
+                    "position": "outside",
+                    "textStyle": {
+                        "fontSize": 12
+                    }
+                },
+                "emphasis": {
+                    "show": true,
+                    "textStyle": {
+                        "fontSize": 12
+                    }
+                }
+            },
+            "lineStyle": {
+                "normal": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid",
+                    "color": "#aaa"
+                }
+            },
+            "roam": true,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "Gateway 1",
+                    "id": "G1"
+                },
+                {
+                    "name": "Node 2",
+                    "id": "N2"
+                },
+                {
+                    "name": "Node 3",
+                    "id": "N3"
+                }
+            ],
+            "edgeSymbol": [
+                null,
+                null
+            ],
+            "edgeSymbolSize": 10,
+            "links": [
+                {
+                    "source": "G1",
+                    "target": "N2"
+                },
+                {
+                    "source": "G1",
+                    "target": "N3"
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selectedMode": "multiple",
+            "show": true,
+            "left": "center",
+            "top": "top",
+            "orient": "horizontal",
+            "textStyle": {
+                "fontSize": 12
+            }
+        }
+    ],
+    "color": [
+        "#c23531",
+        "#2f4554",
+        "#61a0a8",
+        "#d48265",
+        "#749f83",
+        "#ca8622",
+        "#bda29a",
+        "#6e7074",
+        "#546570",
+        "#c4ccd3",
+        "#f05b72",
+        "#ef5b9c",
+        "#f47920",
+        "#905a3d",
+        "#fab27b",
+        "#2a5caa",
+        "#444693",
+        "#726930",
+        "#b2d235",
+        "#6d8346",
+        "#ac6767",
+        "#1d953f",
+        "#6950a1",
+        "#918597",
+        "#f6f5ec"
+    ]
+};
+myChart_4af754dde0c944589d914aec13b6e6dd.setOption(option_4af754dde0c944589d914aec13b6e6dd);
+
+</script>
+</body>
+</html>
