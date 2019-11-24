@@ -1,0 +1,27 @@
+version: '2'
+services:
+    mongodb:
+        image: mongo:latest
+        container_name: "mongodb"
+        environment:
+          - TZ=Asia/Shanghai
+          - MONGO_DATA_DIR=/data/db
+          - MONGO_LOG_DIR=/dev/null
+          - MONGODB_USER=${MONGO_INITDB_ROOT_USERNAME}
+          - MONGODB_PASS=${MONGO_INITDB_ROOT_PASSWORD}
+          - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE}
+        volumes:
+          - ./data/db:/data/db
+        ports:
+            - 27017:27017
+        command: mongod --smallfiles # --logpath=/dev/null # --quiet
+
+        networks:
+            sonet:
+                ipv4_address: 172.19.0.9
+networks:
+    sonet:
+        ipam:
+            config:
+            - subnet: 172.19.0.0/24
+              gateway: 172.19.0.1

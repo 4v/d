@@ -4,3 +4,6 @@
 .local/
 .ipynb_checkpoints/
 .DS_Store
+__pycache__/
+**/site-packages/
+.idea/

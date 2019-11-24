@@ -1,0 +1,7 @@
+tushare
+pandas
+backtrader
+matplotlib
+requests
+lxml
+beautifulsoup4
