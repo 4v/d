@@ -9,8 +9,7 @@ RUN sudo apt update -y \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
 
 USER jovyan
-# ADD pip.conf /home/jovyan/.pip/pip.conf
-RUN echo -e "[global]\nindex-url = http://mirrors.aliyun.com/pypi/simple/\n[install]\ntrusted-host=mirrors.aliyun.com">>/etc/pip.conf 
+ADD pip.conf /home/jovyan/.pip/pip.conf
 RUN pip install --upgrade pip
 # RUN sudo apt install -y python3-tk git unzip
 # RUN pip install -r https://raw.githubusercontent.com/yutiansut/QUANTAXIS/master/requirements.txt -i https://pypi.doubanio.com/simple

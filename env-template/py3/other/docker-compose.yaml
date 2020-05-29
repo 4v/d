@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  py3-pandas:
+    restart: always
+    container_name: py3-pandas
+    image: py3-pandas
+    build: 
+        context: .
+        dockerfile: Dockerfile.py3pandas
+
+  py3-slim-pandas:
+    restart: always
+    container_name: py3-slim-pandas
+    image: py3-slim-pandas
+    build: 
+        context: .
+        dockerfile: Dockerfile.py3slimpandas

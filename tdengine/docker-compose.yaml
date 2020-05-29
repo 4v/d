@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  tdengine:
+    restart: always
+    container_name: tdengine
+    image: tdengine
+    build: .
+    volumes:
+      - ./data/app:/opt/ls
+      - ./data/conf:/etc/taos
+      - ./data/data:/data
+    ports:
+      - 6020:6020
+      - 6030:6030
+      - 6035:6035
+      - 6030-6039:6030-6039/udp
+    # entrypoint: "taosd -c "
